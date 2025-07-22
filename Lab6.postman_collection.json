@@ -1,0 +1,171 @@
+{
+	"info": {
+		"_postman_id": "b0c5575c-641a-4b4d-94cc-e14cf39efff6",
+		"name": "Lab6",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41550137",
+		"_collection_link": "https://www.postman.com/test66-6977/workspace/tuwaiq/collection/41550137-b0c5575c-641a-4b4d-94cc-e14cf39efff6?action=share&source=collection_link&creator=41550137"
+	},
+	"item": [
+		{
+			"name": "Get all employee",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/api/v1/employee/get",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"employee",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add employee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"122\",\n    \"name\": \"muath\",\n    \"email\": \"muath@gmail.com\",\n    \"phoneNumber\":\"0512345678\",\n    \"age\":40,\n    \"position\": \"supervisor\",\n    \"onLeave\": false,\n    \"hireDate\":\"2025-07-10\",\n    \"annualLeave\": 30\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/v1/employee/add",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"employee",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update employee",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\n        \"id\": \"122\",\n        \"name\": \"muath\",\n        \"email\": \"muath@gmail.com\",\n        \"phoneNumber\": \"0512345678\",\n        \"age\": 32,\n        \"position\": \"supervisor\",\n        \"onLeave\": false,\n        \"hireDate\": \"2025-07-10\",\n        \"annualLeave\": 39\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/v1/employee/update/122",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"employee",
+						"update",
+						"122"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete employee",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/api/v1/employee/delete/122",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"employee",
+						"delete",
+						"122"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search by position",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/api/v1/employee/search-by-position/coordinator",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"employee",
+						"search-by-position",
+						"coordinator"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search by age range {min}/{max}",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Employee apply for annual leave",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Get Employees with no annual leave",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Promote-employee",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "http://localhost:8080",
+			"type": "default"
+		}
+	]
+}
